@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera PFE | Captura Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <span class="tag">PROGRAMAÇÃO FRONT-END</span>
+            <h1>Camera <span>PFE.</span></h1>
+            <p>Capture momentos com identificação e filtro visual.</p>
+        </header>
+
+        <section class="painel">
+            <div class="campo">
+                <label for="nomeAluno">Nome do aluno</label>
+                <input
+                    type="text"
+                    id="nomeAluno"
+                    placeholder="Digite seu nome completo"
+                    maxlength="60"
+                >
+            </div>
+
+            <div class="camera-area">
+                <div class="area-titulo">
+                    <span>VISUALIZAÇÃO DA CÂMERA</span>
+                    <span id="indicador">● Desligada</span>
+                </div>
+
+                <video id="video" autoplay playsinline></video>
+
+                <div id="mensagemInicial">
+                    <span class="camera-icon">📷</span>
+                    <p>Sua câmera aparecerá aqui</p>
+                    <small>Clique em "Ligar câmera" para começar.</small>
+                </div>
+            </div>
+
+            <p id="mensagem" role="status" aria-live="polite"></p>
+
+            <div class="botoes">
+                <button id="btnLigar" class="btn-ligar">
+                    Ligar câmera
+                </button>
+
+                <button id="btnCapturar" class="btn-capturar" disabled>
+                    Capturar foto
+                </button>
+
+                <button id="btnDesligar" class="btn-desligar" disabled>
+                    Desligar câmera
+                </button>
+            </div>
+        </section>
+
+        <section class="resultado">
+            <div class="resultado-topo">
+                <div>
+                    <span class="tag">RESULTADO</span>
+                    <h2>Sua fotografia</h2>
+                </div>
+                <span class="filtro">FILTRO SÉPIA</span>
+            </div>
+
+            <div class="foto-area">
+                <canvas id="canvas"></canvas>
+                <div id="mensagemFoto">
+                    <span>🖼️</span>
+                    <p>A foto capturada aparecerá aqui.</p>
+                </div>
+            </div>
+
+            <button id="btnBaixar" class="btn-baixar" disabled>
+                Baixar fotografia
+            </button>
+        </section>
+
+        <footer>
+            <p>Desenvolvido para a atividade de Programação Front-End</p>
+            <p>Professora Andreza Quintas</p>
+        </footer>
+    </main>
+</body>
+</html>
