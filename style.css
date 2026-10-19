@@ -1,0 +1,272 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #101010;
+    color: #f5f5f5;
+    min-height: 100vh;
+    padding: 35px 18px;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tag {
+    color: #d6ad60;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+h1 span {
+    color: #d6ad60;
+}
+
+header p {
+    color: #a7a7a7;
+    font-size: 14px;
+}
+
+.painel,
+.resultado {
+    background: #191919;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 22px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+label {
+    color: #e3c58b;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    background: #101010;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #d6ad60;
+}
+
+.camera-area,
+.foto-area {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    background: #090909;
+    border: 1px solid #363636;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.area-titulo {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #aaa;
+    padding: 14px;
+}
+
+#indicador {
+    color: #ff7777;
+}
+
+#indicador.ligada {
+    color: #75dc9b;
+}
+
+video {
+    display: none;
+    width: 100%;
+    max-height: 430px;
+    object-fit: contain;
+    background: #000;
+}
+
+#mensagemInicial {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #bbb;
+    text-align: center;
+    padding: 20px;
+}
+
+.camera-icon {
+    font-size: 42px;
+}
+
+#mensagemInicial small {
+    color: #777;
+}
+
+#mensagem {
+    min-height: 22px;
+    margin-top: 12px;
+    color: #d6ad60;
+    font-size: 13px;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+button {
+    flex: 1;
+    min-width: 145px;
+    padding: 13px 16px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.btn-ligar {
+    background: #d6ad60;
+    color: #17120a;
+}
+
+.btn-capturar {
+    background: #f3f3f3;
+    color: #151515;
+}
+
+.btn-desligar {
+    background: #752f2f;
+    color: white;
+}
+
+.resultado-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 23px;
+    margin-top: 8px;
+}
+
+.filtro {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #d6ad60;
+    border: 1px solid #6b5735;
+    border-radius: 20px;
+    padding: 8px 10px;
+}
+
+#canvas {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+#mensagemFoto {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+}
+
+#mensagemFoto span {
+    font-size: 35px;
+}
+
+.btn-baixar {
+    margin-top: 15px;
+    background: #d6ad60;
+    color: #17120a;
+}
+
+footer {
+    text-align: center;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.8;
+    padding: 10px;
+}
+
+@media (max-width: 550px) {
+    body {
+        padding: 22px 12px;
+    }
+
+    .painel,
+    .resultado {
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .resultado-topo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    button {
+        min-width: 100%;
+    }
+}
